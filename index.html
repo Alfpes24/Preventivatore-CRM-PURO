@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore Prezzi CRM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calcolatore Prezzi CRM</h1>
+        <form id="calculator-form">
+            <div class="form-group">
+                <label for="rooms">N° Stanze:</label>
+                <input type="number" id="rooms" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="doctors">N° Dottori:</label>
+                <input type="number" id="doctors" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="cpl">CPL per ogni nuovo paziente:</label>
+                <select id="cpl" required>
+                    <option value="17">Capoluogo (17 euro)</option>
+                    <option value="13">No Capoluogo (13 euro)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="additional-locations">Sedi aggiuntive:</label>
+                <input type="number" id="additional-locations" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="noa">NOA:</label>
+                <input type="number" id="noa" min="0" required>
+            </div>
+            <div class="output">
+                <label>Prezzo totale al mese:</label>
+                <span id="monthly-price">0</span>
+                <label>Setup Fee (UNA TANTUM):</label>
+                <span id="setup-fee">0</span>
+                <label>Calcolo Commissioni Sale:</label>
+                <span id="sales-commissions">0</span>
+            </div>
+            <button type="button" id="calculate-btn">Calcola</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
